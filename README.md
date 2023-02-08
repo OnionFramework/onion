@@ -1,2 +1,3 @@
 # onion
-Onion C++ framework for meta-heuristic application development
+
+C++ framework for meta-heuristic application development
