@@ -7,15 +7,10 @@
 # Onion
 [![release-badge]][releases]
 ![license-badge]
-
-Onion is a framework for rapid metaheuristic optimization development.
-  
-
 </div>
 
-Size Limit is a performance budget tool for JavaScript. It checks every commit
-on CI, calculates the real cost of your JS for end-users and throws an error
-if the cost exceeds the limit.
+Onion is a *free*, open source, general-purpose framework for **metaheuristic application development**.
+
 
 * **ES modules** and **tree-shaking** support.
 * Add Size Limit to **Travis CI**, **Circle CI**, **GitHub Actions**
@@ -29,9 +24,9 @@ if the cost exceeds the limit.
   used in your JS.
 
 
-[release-badge]: https://img.shields.io/github/v/release/OnionFramework/onion?color=orange
+[release-badge]: https://img.shields.io/github/v/release/OnionFramework/onion?color=blueviolet
 [releases]: https://github.com/OnionFramework/onion/releases
-[license-badge]: https://img.shields.io/github/license/OnionFramework/onion?color=green
+[license-badge]: https://img.shields.io/github/license/OnionFramework/onion?color=blue
 [license]: https://github.com/OnionFramework/onion/onion/blob/main/LICENSE
 [logo]: onion.png
 
