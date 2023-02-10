@@ -3,7 +3,8 @@
 
 # Onion
 [![release-badge]][releases]
-[![license-badge]][license]
+![license-badge]
+[![License](https://img.shields.io/github/license/OnionFramework/onion?color=blue&style=for-the-badge)](./LICENSE.md)
 
 Onion is a framework for rapid metaheuristic optimization development.
 
