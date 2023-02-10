@@ -30,5 +30,5 @@ Onion is a *free*, open source, general-purpose framework for **metaheuristic ap
 [releases]: https://github.com/OnionFramework/onion/releases
 [license-badge]: https://img.shields.io/github/license/OnionFramework/onion?color=blue
 [license]: https://github.com/OnionFramework/onion/onion/blob/main/LICENSE
-[logo]: onion.png
+[logo]: https://github.com/OnionFramework/onion/blob/main/onion.png
 
