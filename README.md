@@ -1,12 +1,14 @@
 <div align="center"> 
   
 <img src=onion.png align="top"
-     alt="Size Limit logo by Anton Lovchikov" width="200">
+     alt="Onion Logo by flaticon.com" width="200">
 
 
 # Onion
+  
 [![release-badge]][releases]
 ![license-badge]
+  
 </div>
 
 Onion is a *free*, open source, general-purpose framework for **metaheuristic application development**.
