@@ -11,7 +11,7 @@ class CreateOperator : virtual public NonCopyable, public ClassInfo
 {
 public:
 
-    CreateOperator(const ClassInfo& ci):ClassInfo(ci){}
+    CreateOperator() = default;
     virtual ~CreateOperator() = default;
 
     virtual solution_t operator()(void) = 0;

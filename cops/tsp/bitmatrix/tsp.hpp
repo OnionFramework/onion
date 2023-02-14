@@ -1,1 +1,1 @@
-#ifndef TSP_BITMATRIX_H
+//#ifndef TSP_BITMATRIX_H
