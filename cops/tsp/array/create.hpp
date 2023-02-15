@@ -3,52 +3,52 @@
 
 #include <array>
 #include "../../../onion/create.hpp"
-#include "../../cop_info.hpp"
 
 namespace onion{
 namespace cops {
 namespace tsp {
 namespace array {
 
-//template<unsigned int sz> using solution_t = std::array<unsigned int,sz>;
+template<unsigned int sz> using solution_t = std::array<unsigned int,sz>;
 
-//template<unsigned int sz>
-//class CreateRandom : public onion::CreateOperator< solution_t<sz> > :
-//{
-//public:
-//    using Base = onion::CreateOperator< solution_t<sz> >;
+template<unsigned int sz>
+class CreateRandom : public onion::CreateOperator< solution_t<sz> >
+{
+public:
 
-//    CreateRandom(): Base( COPInfo() = { ClassInfo() = {
-//            "CreateRandom",
-//            "Creates a random solution to a TSP problem",
-//            "v0.1.0" },
-//            "TSP",
-//            "Any"} ){
-//    }
+    CreateRandom():Component( SetComponent()
+                                .name("CreateRandom")
+                                .description("Creates a random hamiltonian cycle.")
+                                .type("Create Operator")
+                                .version("v0.1.0")
+                                .problem("TSP")
+                                .solution_type("unsigned int[]")){
+    }
 
-//    virtual solution_t<sz> operator()(void){
+    virtual solution_t<sz> operator()(void){
 
-//    }
-//};
+    }
 
-//template<unsigned int sz>
-//class CreateGreedy : public onion::CreateOperator< solution_t<sz> >
-//{
-//public:
-//    using Base = onion::CreateOperator< solution_t<sz> >;
+};
 
-//    CreateGreedy(): Base( COPInfo() = { ClassInfo() = {
-//            "CreateGreedy",
-//            "Creates a solution to a TSP problem.Starts at a random city; next city is chosen as the closest still available.",
-//            "v0.1.0"},
-//            "TSP",
-//            "Any"} ){
-//    }
+template<unsigned int sz>
+class CreateGreedy : public onion::CreateOperator< solution_t<sz> >
+{
+public:
 
-//    virtual solution_t<sz> operator()(void){
+    CreateGreedy(): Component( SetComponent()
+                               .name("CreateGreedy")
+                               .description("Starts at a random city then move to the closest city recursively until all cities are visited.")
+                               .type("Create Operator")
+                               .version("v0.1.0")
+                               .problem("TSP")
+                               .solution_type("unsigned int[]")){}
 
-//    }
-//};
+    virtual solution_t<sz> operator()(void){
+
+    }
+
+};
 
 }
 }

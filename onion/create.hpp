@@ -1,13 +1,13 @@
 #ifndef CREATE_HPP
 #define CREATE_HPP
 
-#include "class_info.hpp"
+#include "component.hpp"
 #include "non_copyable.hpp"
 
 namespace onion {
 
 template< typename solution_t >
-class CreateOperator : virtual public NonCopyable, public ClassInfo
+class CreateOperator : public NonCopyable, virtual public Component
 {
 public:
 
