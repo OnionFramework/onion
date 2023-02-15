@@ -13,7 +13,7 @@
 
 </div>
  
-<div align=center> Onion logo made from icons by <a href="https://www.flaticon.com/authors/kharisma" title="Kharisma"> Kharisma </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div align=center> Onion logo made with icons by <a href="https://www.flaticon.com/authors/kharisma" title="Kharisma"> Kharisma </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 
 [release-badge]: https://img.shields.io/github/v/release/OnionFramework/onion?color=blueviolet
