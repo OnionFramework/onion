@@ -1,0 +1,7 @@
+<map id="/home/ladeira/Documents/src/onion/onion/RandomEngine.hpp" name="/home/ladeira/Documents/src/onion/onion/RandomEngine.hpp">
+<area shape="rect" id="node1" title="Declaration of the RandomEngine interface." alt="" coords="246,5,501,47"/>
+<area shape="rect" id="node2" href="$_random_8hpp.html" title="This header introduces random number generation facilities." alt="" coords="5,95,216,136"/>
+<area shape="rect" id="node4" href="$_random_legacy_c_8hpp.html" title="Implementation of the RandomEngine interface using the legacy C facilities from the C stdlib." alt="" coords="240,95,507,136"/>
+<area shape="rect" id="node5" href="$_random_s_t_l_8hpp.html" title="Implementation of the Random class inteface." alt="" coords="531,95,765,136"/>
+<area shape="rect" id="node3" href="$_random_8cpp.html" title="Implementation of the global RandomEngine object." alt="" coords="273,184,484,225"/>
+</map>
