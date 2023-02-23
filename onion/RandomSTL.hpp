@@ -1,10 +1,10 @@
 /** @file onion/RandomSTL.hpp
- *  @brief Implementation of the Random class inteface.
+ *  @brief Implementation of the RandomEngine interface using C++11 (and above) RNG facilities.
  *
- *  This file contains the definition of the RandomSTL11 class.
+ *  This file contains the definition of the RandomSTL class.
  *  This class contains the implementation of the Random interface
  *  using the random number generation facilities provided by the
- *  C++ Standard Template Library (STL) available in C++ versions
+ *  C++ Standard Template Library (STL) available in C++, versions
  *  11 and above.
  *
  */
