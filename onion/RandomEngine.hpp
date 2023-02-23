@@ -13,7 +13,7 @@ namespace onion{
  *
  *  RandomEngine is an interface class (an Abstract Data Type) that defines the set
  *  of functionalities that constiture a radom number generator (RNG) engine
- *  in the Onion Franmework contecxt.
+ *  in the Onion Franmework context.
  *
  */
 class RandomEngine{

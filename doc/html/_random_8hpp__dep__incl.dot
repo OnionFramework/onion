@@ -1,0 +1,9 @@
+digraph "/Users/ladeira/Documents/src/onion/onion/Random.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/Users/ladeira/Documents\l/src/onion/onion/Random.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This header introduces the random number generation (RNG) facilities of the Onion Framework."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/Users/ladeira/Documents\l/src/onion/onion/Random.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_random_8cpp.html",tooltip="Implementation of the global RandomEngine object."];
+}

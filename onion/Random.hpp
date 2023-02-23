@@ -1,5 +1,5 @@
 /** @file onion/Random.hpp
- *  @brief This header introduces random number generation facilities.
+ *  @brief This header introduces the random number generation (RNG) facilities of the Onion Framework.
  *
  *  ### Context
  *
@@ -52,32 +52,32 @@
  *      //  gets a random real number in the range [0,1]
  *      auto rndd = Random().uniform_real_01();
  *
- *  ### Performance comparisson
+ *  <h3><a id="perf_comp">Performance comparisson</a></h3>
  *
- *  The next tables preset performance results of the different engines from a few selected compilers.
+ *  The next tables preset performance results of a few different engines as implemented by some compilers.
  *  Results are presented as time relative to the reference implementation. The lower, the faster.
  *
  *  **Reference:** local implementation using C stdlib.<br>
  *  **LegacyC:** Onion implementation using C stdlib.<br>
- *  **STL (LCG):** Linear Congruential Generator (stl::minstd_rand).
+ *  **STL (LCG):** Linear Congruential Generator `stl::minstd_rand`.
  *  This is the default engine in most STL implementations.<br>
- *  **STL (MT):** STL Mersenne Twister 19937 generator implementation.
+ *  **STL (MT):** STL Mersenne Twister 19937 generator.
  *
- *  Test 1: time to generate 1 million uniformly distributed<sup>1</sup> integers in the range [0,max_int]
+ *  Test 1: time to generate 1 million uniformly distributed<sup><a href=#note1>1</a></sup> integers in the range [0,max_int]
  *
  *  | Compiler	                                      | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
  *  | :----                                           | :----:       | :----:       | :----:       | :---:     |
  *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0             | 1.00         | 1.08         | 1.52         | 0.68      |
  *  | Apple LLVM version 10.0.0 (clang-1000.11.45.5)  | 1.00         | 1.00         | 1.50         | 1.63      |
  *
- *  Test 2: time to generate 1 million uniformly distributed<sup>1</sup> integers in the range [1,1000]
+ *  Test 2: time to generate 1 million uniformly distributed<sup><a href=#note1>1</a></sup> integers in the range [1,1000]
  *
  *  | Compiler	                                      | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
  *  | :----                                           | :----:       | :----:       | :----:       | :---:     |
  *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0             | 1.00         | 1.15         | 0.44         | 0.72      |
  *  | Apple LLVM version 10.0.0 (clang-1000.11.45.5)  | 1.00         | 1.05         | 5.18         | 2.86      |
  *
- *  Test 3: time to generate 1 million uniformly distributed<sup>1</sup> real numbers in the range [0,1]
+ *  Test 3: time to generate 1 million uniformly distributed<sup><a href=#note1>1</a></sup> real numbers in the range [0,1]
  *
  *  | Compiler	                                      | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
  *  | :----                                           | :----:       | :----:       | :----:       | :---:     |
@@ -86,7 +86,8 @@
  *
  *  **Notes**
  *
- *  1: Reference and Legacy C implementations produce results that are sligtly [non-uniform](@ref onion::RandomLegacyC).
+ *  <a id="note1">1</a>: Reference and Legacy C implementations produce results that
+ *  are sligtly <a href="classonion_1_1_random_legacy_c.html#c_stdlib_non_uniform">non uniform</a>.
  *
  *  <hr>
  *  @copyright 2022 André Ladeira / Onion Framework.

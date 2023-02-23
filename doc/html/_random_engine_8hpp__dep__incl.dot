@@ -1,0 +1,16 @@
+digraph "/Users/ladeira/Documents/src/onion/onion/RandomEngine.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/Users/ladeira/Documents\l/src/onion/onion/RandomEngine.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Declaration of the RandomEngine interface."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/Users/ladeira/Documents\l/src/onion/onion/Random.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_random_8hpp.html",tooltip="This header introduces the random number generation (RNG) facilities of the Onion Framework."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="/Users/ladeira/Documents\l/src/onion/onion/Random.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_random_8cpp.html",tooltip="Implementation of the global RandomEngine object."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="/Users/ladeira/Documents\l/src/onion/onion/RandomLegacyC.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_random_legacy_c_8hpp.html",tooltip="Implementation of the RandomEngine interface using the legacy C facilities from the C stdlib."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="/Users/ladeira/Documents\l/src/onion/onion/RandomSTL.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_random_s_t_l_8hpp.html",tooltip="Implementation of the RandomEngine interface using C++11 (and above) RNG facilities."];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
