@@ -1,87 +1,84 @@
-#ifndef ONION_RANDOM_H
-#define ONION_RANDOM_H
-
-#include <random>
-#include <functional>
-#include <ctime>
+/** @file onion/RandomEngine.hpp
+ *  @brief Declaration of the RandomEngine interface.
+ *  <hr>
+ *  @copyright 2022 André Ladeira / Onion Framework.
+ */
+#ifndef RANDOMENGINE_HPP
+#define RANDOMENGINE_HPP
 
 namespace onion{
 
-class random{
+/** @class RandomEngine
+ *  @brief Inteface class for random number generation.
+ *
+ *  RandomEngine is an interface class (an Abstract Data Type) that defines the set
+ *  of functionalities that constiture a radom number generator (RNG) engine
+ *  in the Onion Franmework contecxt.
+ *
+ */
+class RandomEngine{
 
 public:
-
     using int_t = unsigned int;
     using real_t = double;
 
-    virtual ~random() = default;
+    /**
+     * @brief Method to return a pseudo-random integer.
+     *
+     * RandomEngine implementations must return a *uniformily distributed* pseudo random integer
+     * in the range of the integer type used. The size of default integer type (`unsigned int`) is 32 bits
+     * in most modern machines. This results in a range  of `[ 0 , uint_max ]` where
+     * uint_max = (2^32) - 1 = 2,147,483,647
+     */
     virtual int_t uniform_int() noexcept = 0;
+    /**
+     * @brief Method to return a pseudo-random integer in the [*min*,*max*] interval.
+     * @param min the lower limit of the interval.
+     * @param max the upper limit of the interval.
+     *
+     * RandomEngine implementations must return a *uniformily distributed* pseudo-random integer
+     * in the range [min,max].
+     */
     virtual int_t uniform_int_between(int_t min, int_t max) noexcept = 0;
+    /**
+     * @brief Method to return a real number between 0 and 1.
+     *
+     * RandomEngine implementations must return a *uniformily distributed* real number in the range [0,1]
+     *
+     */
     virtual real_t uniform_real_01() noexcept = 0;
-    virtual void seed() noexcept = 0;
+    /**
+     * @brief Interface method to implement the seed mechanism.
+     * @param s the seed value, default 0.
+     *
+     * The behaviour of the seed function depends on the seed provided:
+     *
+     * - If no value (default) or zero is provided, implementations shoud use some
+     *  *high-resolution* seeding mechanism, like a high-resolution clock.
+     *
+     * - If any value other than zero is provided it is used the seed. Deterministic seeds
+     * can be used to produce a expected result in a debug or test routine, for example.
+     *
+     *  *Why it should be high resolution?*
+     * Because different pseudo-random number sequences may be required within a very
+     * short time intervals. If the seed generation method is not refined enough, it
+     * come up with the same seed if called twice in that interval.
+     *
+     */
+    virtual void seed(int_t s = 0) noexcept = 0;
 
-};
+protected:
 
-class random_legacy_c : public random{
+    friend class RandomEngineProxy;
 
-public:
-
-    random_legacy_c() noexcept {
-        seed();
-    }
-
-    virtual ~random_legacy_c() = default;
-
-    virtual int_t uniform_int() noexcept {
-        return static_cast<int_t> (std::rand());
-    }
-
-    virtual int_t uniform_int_between(int_t min, int_t max) noexcept {
-        auto range = max-min+1;
-        return uniform_int() % range + min;
-    }
-
-    virtual real_t uniform_real_01() noexcept {
-        return static_cast<real_t>( std::rand() ) / RAND_MAX ;
-    }
-
-    virtual void seed() noexcept {
-        std::srand( static_cast<unsigned int>( std::time(nullptr) ) );
-    }
-
-};
-
-template< class random_engine_t = std::mt19937 >
-class random_cpp11 : public random{
-
-public:
-
-    random_cpp11() noexcept {
-        seed();
-    }
-
-    virtual ~random_cpp11() = default;
-
-    virtual inline int_t uniform_int() noexcept {
-        return std::uniform_int_distribution<int_t>()(random_engine);
-    }
-
-    virtual inline int_t uniform_int_between(int_t min, int_t max) noexcept {
-        return std::uniform_int_distribution<int_t>(min,max)(random_engine);
-    }
-
-    virtual inline real_t uniform_real_01() noexcept {
-        return std::uniform_real_distribution<real_t>(0.0,1.0)(random_engine);
-    }
-
-    virtual void seed() noexcept {
-        std::random_device r;
-        random_engine.seed( r() );
-    }
-
-private:
-
-    random_engine_t random_engine;
+    /**
+     * @brief Class constructor
+     */
+    RandomEngine() = default;
+    /**
+     * @brief Class destructor
+     */
+    virtual ~RandomEngine() = default;
 
 };
 
