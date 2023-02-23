@@ -1,12 +1,6 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
-#ignore Qt build directories
-build-qt-*
-
-#ignore vscode build
-vscode/main
-
 # Prerequisites
 *.d
 
@@ -44,5 +38,5 @@ vscode/main
 *.user
 build-qt*
 
-#do not ignore makefiles
-!makefile
+#ignore vscode build
+vscode/main
