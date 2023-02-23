@@ -4,6 +4,6 @@ if [ "$1" == "" ] || [ "$2" == "" ]; then
 fi
 
 git add $1
-echo "git commit -m \"$2\""
-#git commit -m \"$2\"
-#git push
+#echo "git commit -m \"$2\""
+git commit -m \"$2\"
+git push
