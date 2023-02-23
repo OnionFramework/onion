@@ -65,21 +65,24 @@
  *
  *  Test 1: time to generate 1 million uniformly distributed<sup>1</sup> integers in the range [0,max_int]
  *
- *  | Compiler	                          | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
- *  | :----                               | :----:       | :----:       | :----:       | :---:     |
- *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0 | 1.00         | 1.08         | 1.52         | 0.68      |
+ *  | Compiler	                                      | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
+ *  | :----                                           | :----:       | :----:       | :----:       | :---:     |
+ *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0             | 1.00         | 1.08         | 1.52         | 0.68      |
+ *  | Apple LLVM version 10.0.0 (clang-1000.11.45.5)  | 1.00         | 1.00         | 1.50         | 1.63      |
  *
  *  Test 2: time to generate 1 million uniformly distributed<sup>1</sup> integers in the range [1,1000]
  *
- *  | Compiler	                          | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
- *  | :----                               | :----:       | :----:       | :----:       | :---:     |
- *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0 | 1.00         | 1.15         | 0.44         | 0.72      |
+ *  | Compiler	                                      | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
+ *  | :----                                           | :----:       | :----:       | :----:       | :---:     |
+ *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0             | 1.00         | 1.15         | 0.44         | 0.72      |
+ *  | Apple LLVM version 10.0.0 (clang-1000.11.45.5)  | 1.00         | 1.05         | 5.18         | 2.86      |
  *
  *  Test 3: time to generate 1 million uniformly distributed<sup>1</sup> real numbers in the range [0,1]
  *
- *  | Compiler	                          | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
- *  | :----                               | :----:       | :----:       | :----:       | :---:     |
- *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0 | 1.00         | 1.08         | 0.67         | 1.06      |
+ *  | Compiler	                                      | Reference    | Legacy C     | STL (LCG)    | STL (MT)  |
+ *  | :----                                           | :----:       | :----:       | :----:       | :---:     |
+ *  | g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0             | 1.00         | 1.08         | 0.67         | 1.06      |
+ *  | Apple LLVM version 10.0.0 (clang-1000.11.45.5)  | 1.00         | 0.98         | 1.56         | 2.54      |
  *
  *  **Notes**
  *
