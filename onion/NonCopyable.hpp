@@ -1,5 +1,5 @@
-#ifndef NON_COPYABLE_HPP
-#define NON_COPYABLE_HPP
+#ifndef NONCOPYABLE_H
+#define NONCOPYABLE_H
 
 namespace onion {
 
