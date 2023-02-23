@@ -2,7 +2,7 @@
 #define CREATE_HPP
 
 #include "component.hpp"
-#include "non_copyable.hpp"
+#include "NonCopyable.hpp"
 
 namespace onion {
 
