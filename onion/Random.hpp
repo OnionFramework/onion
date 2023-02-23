@@ -1,5 +1,5 @@
 /** @file onion/Random.hpp
- *  @brief Introduces the random number generation (RNG) facilities of the Onion Framework.
+ *  @brief This header introduces the random number generation (RNG) facilities of the Onion Framework.
  *
  *  ### Context
  *

@@ -127,20 +127,20 @@ $(document).ready(function(){initNavTree('_random_8hpp.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p>Introduces the random number generation (RNG) facilities of the Onion Framework.  
+<p>This header introduces the random number generation (RNG) facilities of the Onion Framework.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_random_engine_8hpp_source.html">onion/RandomEngine.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_non_copyable_8hpp_source.html">onion/NonCopyable.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Random.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_random_8hpp__incl.svg" width="400" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><!-- SVG 0 -->
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_random_8hpp__dep__incl.svg" width="222" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><!-- SVG 1 -->
 </div>
 </div>
 </div>
@@ -165,7 +165,7 @@ Functions</h2></td></tr>
 <tr class="separator:ae23407f6fc77f1bb2a9b6fc3c2c42dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Introduces the random number generation (RNG) facilities of the Onion Framework. </p>
+<div class="textblock"><p>This header introduces the random number generation (RNG) facilities of the Onion Framework. </p>
 <h3><a class="anchor" id="autotoc_md0"></a>
 Context</h3>
 <p>Random number generation (RNG) during software development is usually quite simple. Every modern programming language contains at least one built-in library for this purpose. There are several different algorithms for RNG but using different RNG algorithms in different parts of the same application might result in a few development headaches:</p>
@@ -203,7 +203,7 @@ auto rndd = Random().uniform_real_01();
 <p><b>Reference:</b> local implementation using C stdlib.<br  />
  <b>LegacyC:</b> Onion implementation using C stdlib.<br  />
  <b>STL (LCG):</b> Linear Congruential Generator <code>stl::minstd_rand</code>. This is the default engine in most STL implementations.<br  />
- <b>STL (MT):</b> STL Mersenne Twister 19937 generator implementation.</p>
+ <b>STL (MT):</b> STL Mersenne Twister 19937 generator.</p>
 <p>Test 1: time to generate 1 million uniformly distributed<sup><a href="#note1">1</a></sup> integers in the range [0,max_int]</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
