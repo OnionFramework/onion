@@ -14,9 +14,27 @@ namespace onion{
 /** @class RandomLegacyC
  *  @brief Implements the RandomEngine interface using legacy C functions from C stdlib.
  *
+ *  The random facilities from the C stdlib are known to produce low quality random numbers.
+ *  Because of that, this implementation is provided as a convenience only and **should not** be
+ *  used as a first option in most cases.
+ *
+ *  The implementations that use the C++ STL facilities ( RandomSTL ) produce results that are better and,
+ *  in many cases, <a href="_random_8hpp.html#perf_comp">faster</a>.
+ *
+ *  Possible cases where this implementation might be usefull:
+ *
+ *  - To reproduce and compare results with other applications.
+ *  - To test or improve performance, when the quality of the random number it provides is acceptable.
+ *
+ *  **When is it acceptable?**
+ *
+ *  Thats a good question I do not know the answer. But I plan to answer it later.
+ *
+ *  <h3><a id=c_stdlib_non_uniform>C stdlib `rand()` random numbers are not uniform</a></h3>
+ *
  *  The `rand()` function from `<cstdlib>` produces random numbers that are not exactly uniform.
- *  Therefore, the uniform_* functions of this implementation also do not produce
- *  pseudo-random numbers that are exactly uniformly distributed in the given intervals.
+ *  Therefore, this implementation also do not produce pseudo-random numbers that are exactly uniformly
+ *  distributed in the given intervals.
  *
  *  For more information, please refer to the
  *  <a href="https://cplusplus.com/reference/cstdlib/rand/">rand() function documentation</a>.
