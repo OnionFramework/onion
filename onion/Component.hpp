@@ -1,5 +1,11 @@
-#ifndef COMPONENT_HPP
-#define COMPONENT_HPP
+#ifndef COMPONENT_H
+#define COMPONENT_H
+
+/** @file onion/Component.hpp
+ *  @brief This header defines the Component interface and its data.
+ *  <hr>
+ *  @copyright 2022 André Ladeira / Onion Framework.
+ */
 
 #include <string>
 #include <sstream>
