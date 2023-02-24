@@ -55,7 +55,8 @@
  *  <h3><a id="perf_comp">Performance comparisson</a></h3>
  *
  *  The next tables preset performance results of a few different engines as implemented by some compilers.
- *  Results are presented as time relative to the reference implementation. The lower, the faster.
+ *  **Results are presented as time relative to the reference implementation**. A result of 1.5 means that
+ *  the implementation is 50% ***slower*** than the reference.
  *
  *  **Reference:** local implementation using C stdlib.<br>
  *  **LegacyC:** Onion implementation using C stdlib.<br>
