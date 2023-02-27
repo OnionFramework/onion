@@ -1,5 +1,5 @@
-#ifndef COMPONENT_H
-#define COMPONENT_H
+#ifndef COMPONENTID_H
+#define COMPONENTID_H
 
 /** @file onion/Component.hpp
  *  @brief This header defines the Component interface and its data.
@@ -18,39 +18,38 @@ namespace onion{
 class ComponentData{
 public:
 
-    string _name;  // CreateRandom
-    string _type;  // Create Operator
-    string _description;  // Creates random hamiltonian cycle....
-    string _version;   // v0.1.0
-    string _problem;   // TSP, MKP ...
-    string _solution_type; // array, bitmatrix, other
+    string _name            = "Not set";  // CreateRandom
+    string _type            = "Onion Framework Component";  // Create Operator
+    string _description     = "Not set";  // Creates random hamiltonian cycle....
+    string _version         = "v0.1.0";   // v0.1.0
+    string _problem         = "Any";   // TSP, MKP ...
+    string _solution_type   = "Any"; // array, bitmatrix, other
 };
 
-class SetComponent{
+class SetComponentID{
 public:
-    SetComponent& name(const string& name){_data._name = name; return *this;}
-    SetComponent& type(const string& type){_data._type = type; return *this;}
-    SetComponent& description(const string& desc){_data._description = desc; return *this;}
-    SetComponent& version(const string& ver){_data._version = ver; return *this;}
-    SetComponent& problem(const string& problem){_data._problem= problem; return *this;}
-    SetComponent& solution_type(const string& sol_t){_data._solution_type = sol_t; return *this;}
+    SetComponentID& name(const string& name){_data._name = name; return *this;}
+    SetComponentID& type(const string& type){_data._type = type; return *this;}
+    SetComponentID& description(const string& desc){_data._description = desc; return *this;}
+    SetComponentID& version(const string& ver){_data._version = ver; return *this;}
+    SetComponentID& problem(const string& problem){_data._problem= problem; return *this;}
+    SetComponentID& solution_type(const string& sol_t){_data._solution_type = sol_t; return *this;}
 private:
     friend class Component;
     ComponentData _data;
 
 };
 
-class Component
+class ComponentID
 {
 protected:
 
-    Component(const SetComponent& s):_data(s._data){}
-    ~Component() = default;
+    ComponentID(const SetComponentID& s):_data(s._data){}
+    virtual ~ComponentID() = default;
 
 private:
 
     friend std::ostream& operator<<(std::ostream& os, const Component& obj);
-
     ComponentData _data;
 
 public:

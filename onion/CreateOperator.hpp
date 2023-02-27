@@ -1,5 +1,5 @@
-#ifndef CREATE_H
-#define CREATE_H
+#ifndef CREATEOPERATOR_H
+#define CREATEOPERATOR_H
 
 /** @file onion/Create.hpp
  *  @brief This header defines the interface of the Create component.
@@ -7,19 +7,17 @@
  *  @copyright 2022 André Ladeira / Onion Framework.
  */
 
-#include "Component.hpp"
+#include "ComponentID.hpp"
 #include "NonCopyable.hpp"
 
-namespace onion {
+namespace onion{
 
 template< typename solution_t >
-class CreateOperator : public NonCopyable, virtual public Component
+class CreateOperator : public NonCopyable, virtual public ComponentID
 {
 public:
 
-    CreateOperator() = default;
     virtual ~CreateOperator() = default;
-
     virtual solution_t operator()(void) = 0;
 };
 

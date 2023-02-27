@@ -5,4 +5,7 @@
  *  <hr>
  *  @copyright 2022 André Ladeira / Onion Framework.
  */
+
+
+
 #endif // ALGORITHM_HPP
