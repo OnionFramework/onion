@@ -1,5 +1,6 @@
 #ifndef COMPARISSONOPERATOR_HPP
 #define COMPARISSONOPERATOR_HPP
+
 namespace onion{
 
 template<typename T> using ComparissonOperator = bool (*)(T,T);

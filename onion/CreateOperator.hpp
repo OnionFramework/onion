@@ -7,7 +7,7 @@
  *  @copyright 2022 André Ladeira / Onion Framework.
  */
 
-#include "ComponentID.hpp"
+#include "IdentifiedComponent.hpp"
 #include "NonCopyable.hpp"
 
 namespace onion{

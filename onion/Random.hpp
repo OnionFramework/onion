@@ -153,11 +153,20 @@ private:
     static RandomEngine* _engine;
 };
 
+/**
+ * @brief Return access point to the global RandomEngine object
+ *
+ */
+
 inline RandomEngine& Random(){
      static RandomEngineProxy proxy;
      return RandomEngineProxy::getRandomEngine();
 }
 
+/**
+ * @brief Sets the global RandomEngine object
+ *
+ */
 inline void SetRandomEngine(RandomEngine* newEngine){
      return RandomEngineProxy::setRandomEngine(newEngine);
 }

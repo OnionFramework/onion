@@ -1,7 +1,7 @@
 #ifndef SELECTOPERATOR_HPP
 #define SELECTOPERATOR_HPP
 
-#include "ComponentID.hpp"
+#include "IdentifiedComponent.hpp"
 #include "NonCopyable.hpp"
 #include "ComparissonOperator.hpp"
 

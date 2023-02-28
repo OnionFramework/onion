@@ -2,7 +2,7 @@
 #define OBJECTIVEFUNCTION_HPP
 
 #include "NonCopyable.hpp"
-#include "ComponentID.hpp"
+#include "IdentifiedComponent.hpp"
 
 namespace onion{
 
