@@ -7,7 +7,7 @@
 namespace onion{
 
 template< typename solution_t, typename transition_t>
-class NeighborhoodOperator : public NonCopyable, public ComponentID
+class NeighborhoodOperator : public NonCopyable, public IdentifiedComponent
 {
 public:
 

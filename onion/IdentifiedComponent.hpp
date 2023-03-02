@@ -83,7 +83,7 @@ class IdentifiedComponent
 protected:
 
     IdentifiedComponent(const ComponentIdBuilder& s):_id(s._id){}
-    virtual ~IdentifiedComponent() = default;
+    ~IdentifiedComponent() = default;
 
 private:
 

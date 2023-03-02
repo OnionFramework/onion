@@ -13,7 +13,7 @@
 namespace onion{
 
 template< typename solution_t >
-class CreateOperator : public NonCopyable, virtual public ComponentID
+class CreateOperator : public NonCopyable, public IdentifiedComponent
 {
 public:
 
