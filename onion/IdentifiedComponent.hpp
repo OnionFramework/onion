@@ -1,32 +1,26 @@
-#ifndef IDENTIFIEDCOMPONENT_H
-#define IDENTIFIEDCOMPONENT_H
-
-/** @file onion/Component.hpp
- *  @brief This header defines the Component interface and its data.
+/** @file onion/IdentifiedComponent.hpp
+ *  @brief This header contains the classes used to identify a component of the Onion Framework.
  *  <hr>
  *  @copyright 2022 André Ladeira / Onion Framework.
  */
 
+#ifndef IDENTIFIEDCOMPONENT_H
+#define IDENTIFIEDCOMPONENT_H
+
 #include <string>
-#include <sstream>
 #include <ostream>
 
 using std::string;
 
 namespace onion{
 
-/** @class RandomEngineProxy
- *  @brief Creates and control the access to the global RandonEngine object.
+/** @class ComponentID
+ *  @brief Defines the data used to identify a component.
  *
- *  The Onion Framework recomends that random number generation to be both centralized
- *  and homogeneous, i.e., use a single algorithm. A discussion on this subject is presented
- *  [(here)](@ref onion/Random.hpp).
- *
- *  All RandomEngineProxy methods are private. RNG functionalities are accessed using the
- *  Random() and SetRandomEngine functions.
+ *  The Onion framework is structured around extensible components. This class contains data used to
+ *  clearly identify each component.
  *
  */
-
 class ComponentID{
 public:
 
@@ -38,15 +32,11 @@ public:
     string solution_type   = "Any"; // array, bitmatrix, other
 };
 
-/** @class RandomEngineProxy
- *  @brief Creates and control the access to the global RandonEngine object.
+/** @class ComponentIdBuilder
+ *  @brief Builder to create a componentID
  *
- *  The Onion Framework recomends that random number generation to be both centralized
- *  and homogeneous, i.e., use a single algorithm. A discussion on this subject is presented
- *  [(here)](@ref onion/Random.hpp).
- *
- *  All RandomEngineProxy methods are private. RNG functionalities are accessed using the
- *  Random() and SetRandomEngine functions.
+ *  The onion framework uses a simplified version of the Builder Pattern to create objects that have certain characteristics.
+ *  A thorough explanation on this is presented [(here)](@ref BUILDERPATTERNPAGE).
  *
  */
 class ComponentIdBuilder{
@@ -66,18 +56,10 @@ private:
 
 };
 
-/** @class RandomEngineProxy
- *  @brief Creates and control the access to the global RandonEngine object.
- *
- *  The Onion Framework recomends that random number generation to be both centralized
- *  and homogeneous, i.e., use a single algorithm. A discussion on this subject is presented
- *  [(here)](@ref onion/Random.hpp).
- *
- *  All RandomEngineProxy methods are private. RNG functionalities are accessed using the
- *  Random() and SetRandomEngine functions.
+/** @class IdentifiedComponent
+ *  @brief Onion components derive from this class in order to add identification functionality.
  *
  */
-
 class IdentifiedComponent
 {
 protected:
@@ -91,18 +73,11 @@ private:
     ComponentID _id;
 };
 
-/** @class RandomEngineProxy
- *  @brief Creates and control the access to the global RandonEngine object.
- *
- *  The Onion Framework recomends that random number generation to be both centralized
- *  and homogeneous, i.e., use a single algorithm. A discussion on this subject is presented
- *  [(here)](@ref onion/Random.hpp).
- *
- *  All RandomEngineProxy methods are private. RNG functionalities are accessed using the
- *  Random() and SetRandomEngine functions.
- *
+/** @brief Outputs a component ID to a stream in a user readable format.
+ *  @param [in] os the output stream
+ *  @param [in] c a constant reference to the component whose ID is to be printed.
+ *  @return The os output stream, so it can be used in sequence.
  */
-
 std::ostream& operator<<(std::ostream& os, const IdentifiedComponent& c){
     os << "Name          : " << c._id.name << std::endl;
     os << "Type          : " << c._id.type << std::endl;
@@ -112,6 +87,11 @@ std::ostream& operator<<(std::ostream& os, const IdentifiedComponent& c){
     os << "Solution type : " << c._id.solution_type << std::endl;
     return os;
 }
+/** @brief Outputs a component ID to a stream in a user readable format.
+ *  @param [in] os the output stream
+ *  @param [in] c a constant pointer to the component whose ID is to be printed.
+ *  @return The os output stream, so it can be in sequence.
+ */
 std::ostream& operator<<(std::ostream& os, const IdentifiedComponent* const c ){
    return operator<<(os,*c);
 }

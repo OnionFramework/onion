@@ -33,8 +33,8 @@ public:
     virtual int_t uniform_int() noexcept = 0;
     /**
      * @brief Method to return a pseudo-random integer in the [*min*,*max*] interval.
-     * @param min the lower limit of the interval.
-     * @param max the upper limit of the interval.
+     * @param [in] min the lower limit of the interval.
+     * @param [in] max the upper limit of the interval.
      *
      * RandomEngine implementations must return a *uniformily distributed* pseudo-random integer
      * in the range [min,max].

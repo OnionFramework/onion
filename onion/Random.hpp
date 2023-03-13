@@ -5,8 +5,9 @@
  *
  *  Random number generation (RNG) during software development is usually quite simple.
  *  Every modern programming language contains at least one built-in library for this purpose.
- *  There are several different algorithms for RNG but using different RNG algorithms
- *  in different parts of the same application might result in a few development headaches:
+ *
+ *  There are many different algorithms for RNG. However, using different RNG algorithms
+ *  in different parts of the same application might the source of a few development headaches:
  *
  *  - **Debugging and result comparisson:** a simple way to compare results from different implementations
  *   of the same algorithm/problem is to run both using the same seed.
@@ -18,8 +19,7 @@
  *  may require changing the RNG algorithm entirely. Without a centralized RNG system, that may be impossible.
  *  Or, at least, a development nigthmare.
  *
- *  Demmanding each component to re-implement the same RNG functionalities is also boring and error prone,
- *  from the developer point of view.
+ *  From the developer perspective, re-implement the same RNG functionalities is also boring and error prone.
  *
  *  In order to avoid these problems the Onion Framework provides a centralized system for RNG.
  *  It is constituted by the following components:

@@ -41,3 +41,6 @@ build-qt*
 
 #ignore vscode build
 vscode/main
+
+#added this thing
+.DS_Store
