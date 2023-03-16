@@ -7,30 +7,32 @@
 #define OBJECTIVEFUNCTION_HPP
 
 #include "NonCopyable.hpp"
-#include "IdentifiedComponent.hpp"
+#include "ComponentID.hpp"
 
 namespace onion{
 
 /** @class ObjectiveFunction
- *  @brief Defines the interface of ObjectiveFunction components.
+ *  @brief Abstract Data Type that defines the ObjectiveFuntion component.
  *  @param solution_t the type used to represent a solution to a problem.
  *  @param objective_value_t the type used to represent the value of a solution.
  *
- *  The ObjectiveFunction is responsible for assigning a value to a solution of a problem.
+ *  In simple terms, ObjectiveFunction determines the value of a particular solution to a problem,
+ *  based on the compact data used to represent a problem instance.
  *
  *  All algorithms are, in essence, ways of navigating the solution space. In this metaphore,
- *  the ObjectiveFunction can be interpreted as the compass that poits towards the right direction.
- *  Its the objective function that tells the algorithm if a solution A is better or worse than a solution B.
+ *  the ObjectiveFunction is the compass that poits towards the right direction.
+ *  It is the objective function that tells the algorithm if a solution **A**
+ *  is better or worse than some other alternative **B**.
  *
- *  The ObjectiveFunction class is an [ADT](@ref ABSTRACTDATATYPE) used to represent this
- *  concept and define the protocol of this functionality.
- *
- *  This is one of the fundamental components of the Onion Framework, the others being
- *  the CreateOperator, the PerturbationOperator and the SelectOperator.
+ *  @note
+ *  ObjectiveFunction is an <a href="./md__glossary.html#abstract_data_type">Abstract Data Type</a>.
+ *  It means it provides no functionality and can't be instantiated.
+ *  Instead, its purpose is to define unambiguously what "Objective" means in the framewok's context.
+ *  Actual functionality will be defined later by concrete implementions in derived classes.
  *
  */
 template< typename solution_t, typename objective_value_t>
-class ObjectiveFunction : public NonCopyable, public IdentifiedComponent
+class ObjectiveFunction : public NonCopyable, public ComponentID
 {
 public:
 

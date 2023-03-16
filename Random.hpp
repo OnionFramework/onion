@@ -96,8 +96,8 @@
 #ifndef RANDOM_HPP
 #define RANDOM_HPP
 
-#include "onion/RandomEngine.hpp"
-#include "onion/NonCopyable.hpp"
+#include "RandomEngine.hpp"
+#include "NonCopyable.hpp"
 
 namespace onion{
 

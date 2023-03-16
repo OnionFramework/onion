@@ -6,7 +6,7 @@
 #ifndef SELECTOPERATOR_HPP
 #define SELECTOPERATOR_HPP
 
-#include "IdentifiedComponent.hpp"
+#include "ComponentID.hpp"
 #include "NonCopyable.hpp"
 #include "ComparissonOperator.hpp"
 
@@ -14,14 +14,14 @@ namespace onion{
 
 /** @class SelectOperator
  *  @brief Defines the interface of SelectOperator components.
- *  @param solution_t the type used to represent a solution to a problem.
+ *  @param objective_value_t.
  *  @param objective_value_t the type used to represent the value of a solution.
  *
  *  The ObjectiveFunction is responsible for assigning a value to a solution of a problem.
  *
  *  All algorithms are, in essence, ways of navigating the solution space. In this metaphore,
  *  the ObjectiveFunction can be interpreted as the compass that poits towards the right direction.
- *  Its the objective function that tells the algorithm if a solution A is better or worse than a solution B.
+ *  It is the objective function that tells the algorithm if a solution A is better or worse than a solution B.
  *
  *  The ObjectiveFunction class is an [ADT](@ref ABSTRACTDATATYPE) used to represent this
  *  concept and define the protocol of this functionality.

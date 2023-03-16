@@ -1,5 +1,5 @@
 /** @file onion/ComparissonOperator.hpp
- *  @brief This header introduces the facilities for the abstraction comparisson of objects.
+ *  @brief This header introduces the facilities for abstracting the comparisson of objects.
  *
  *  A simple and effective way to improve code reuse and reduce code bloating in the
  *  metaheuristic programming context is to abstract the comparisson of objects.

@@ -1,3 +1,4 @@
+
 #ifndef ALGORITHM_HPP
 #define ALGORITHM_HPP
 /** @file onion/Algorithm.hpp

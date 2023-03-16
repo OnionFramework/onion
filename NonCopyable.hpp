@@ -12,11 +12,11 @@ namespace onion {
  *  @brief Class to make other classes non-copyable.
  *
  *  In many situations its not reasonable nor logical to let applications
- *  create or set objects as copies of another objects.
+ *  to create or set objects as copies of another objects.
  *  In terms os internal structure, this is usually the case of classes whose behaviour depends upon
- *  some internal state or that encapsulate some kind of resource.
- *  Logically, this applies to objects that are unique in some particular context.
- *  The later is the case for many components of the Onion Framework.
+ *  some internal state or of that encapsulate some kind of critical resource.
+ *  Logically, this applies to objects that are suposed to be unique in some particular context.
+ *  The later is the case of many components of the Onion Framework.
  *
  *  The purpose of the NonCopyable class is just to make this behaviour
  *  a little bit more simple to implement and evident to read.
