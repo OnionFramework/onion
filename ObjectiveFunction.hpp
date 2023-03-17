@@ -42,10 +42,10 @@ public:
     virtual ~ObjectiveFunction() = default;
     /**
      * @brief Assigns a value to a solution.
-     * @param S A (possibly unitary) set of solutions to be evaluated.
+     * @param s A (possibly unitary) set of solutions to be evaluated.
      * @return A (possibly unitary) set of values that rank the solutions relatives to each other.
      */
-    virtual objective_value_t operator()(const solution_t&) = 0;
+    virtual objective_value_t operator()(const solution_t& s) = 0;
 };
 
 }

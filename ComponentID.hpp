@@ -1,4 +1,4 @@
-/** @file onion/IdentifiedComponent.hpp
+/** @file onion/ComponentID.hpp
  *  @brief This header contains the classes used to identify a component of the Onion Framework.
  *  <hr>
  *  @copyright 2022 André Ladeira / Onion Framework.
@@ -105,31 +105,31 @@ protected:
 
 private:
 
-    friend std::ostream& operator<<(std::ostream& os, const ComponentID& obj);
+    friend std::ostream& operator<<(std::ostream& os, const ComponentID& id);
     ComponentData _id;
 };
 
 /** @brief Outputs a component ID to a stream in a user readable format.
  *  @param [in] os the output stream
- *  @param [in] c a constant reference to the component whose ID is to be printed.
- *  @return The os output stream, so it can be used in sequence.
+ *  @param [in] id a constant reference to the component whose ID is to be printed.
+ *  @return the os output stream, so it can be used in sequence.
  */
-std::ostream& operator<<(std::ostream& os, const ComponentID& c){
-    os << "Name          : " << c._id.name << std::endl;
-    os << "Type          : " << c._id.type << std::endl;
-    os << "Description   : " << c._id.description << std::endl;
-    os << "Version       : " << c._id.version << std::endl;
-    os << "Problem       : " << c._id.problem << std::endl;
+std::ostream& operator<<(std::ostream& os, const ComponentID& id){
+    os << "Name          : " << id._id.name << std::endl;
+    os << "Type          : " << id._id.type << std::endl;
+    os << "Description   : " << id._id.description << std::endl;
+    os << "Version       : " << id._id.version << std::endl;
+    os << "Problem       : " << id._id.problem << std::endl;
 //    os << "Solution type : " << c._id.solution_type << std::endl;
     return os;
 }
 /** @brief Outputs a component ID to a stream in a user readable format.
  *  @param [in] os the output stream
- *  @param [in] c a constant pointer to the component whose ID is to be printed.
+ *  @param [in] id a constant pointer to the component whose ID is to be printed.
  *  @return The os output stream, so it can be in sequence.
  */
-std::ostream& operator<<(std::ostream& os, const ComponentID* const c ){
-   return operator<<(os,*c);
+std::ostream& operator<<(std::ostream& os, const ComponentID* const id ){
+   return operator<<(os,*id);
 }
 
 }

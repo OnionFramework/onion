@@ -23,7 +23,7 @@ namespace onion{
  *  the ObjectiveFunction can be interpreted as the compass that poits towards the right direction.
  *  It is the objective function that tells the algorithm if a solution A is better or worse than a solution B.
  *
- *  The ObjectiveFunction class is an [ADT](@ref ABSTRACTDATATYPE) used to represent this
+ *  The ObjectiveFunction class is an ADT used to represent this
  *  concept and define the protocol of this functionality.
  *
  *  This is one of the fundamental components of the Onion Framework, the others being
