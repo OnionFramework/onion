@@ -21,7 +21,7 @@ template <typename, typename = void>
 constexpr bool has_subscript_operator = false;
 
 template <typename T>
-constexpr bool has_subscript_operator<T, void_t< decltype(std::declval<T>().at(0))>> = true;
+constexpr bool has_subscript_operator<T, void_t< decltype(std::declval<T>()[0])>> = true;
 
 
 }
