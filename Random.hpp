@@ -104,9 +104,10 @@ namespace onion{
 /** @class RandomEngineProxy
  *  @brief Creates and control the access to the global RandonEngine object.
  *
- *  The Onion Framework recomends that random number generation to be both centralized
- *  and homogeneous, i.e., use a single algorithm. A discussion on this subject is presented
- *  [(here)](@ref onion/Random.hpp).
+ *  The Onion Framework recomends random number generation to be
+ *  - centralized: perfomed by a single, easily replaceable object
+ *  - homogeneous: use the same algorithm anywhere RNG is necessary.
+ *   A discussion on this subject is presented [(here)](@ref onion/Random.hpp).
  *
  *  All RandomEngineProxy methods are private. RNG functionalities are accessed using the
  *  Random() and SetRandomEngine functions.
