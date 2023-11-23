@@ -14,7 +14,7 @@ using std::string;
 namespace onion{
 
 /** @class ComponentData
- *  @brief Class that contains the data used to identify a component.
+ *  @brief This class contains the data used to identify a component.
  *
  *  The Onion Framework is structured around extensible components that can become quite complex.
  *  This class contains data used to clearly identify each component.
@@ -24,17 +24,17 @@ class ComponentData{
 public:
     /** @brief Name of the component. Usually the name of the Class.
      */
-    string name            = "Not set";  // CreateRandom
+    string name            = "Not set";
     /** @brief Component type. Ex: CreateOperator, SelectOperator Decorator etc..."
      */
-    string type            = "Onion Framework Component";  // Create Operator
+    string type            = "Onion Framework Component";
     /** @brief A compact description of what the component does.
      *  Ex: Creates a random hamiltonian cycle...."
      */
-    string description     = "Not set";  // Creates random hamiltonian cycle....
+    string description     = "Not set";
     /** @brief Ccomponent version. Used to identify it unambiguously."
      */
-    string version         = "v0.1.0";   // v0.1.0
+    string version         = "v0.1.0";
     /** @brief The problem it belongs to.
      *  TSP, MKP etc..."
      */
@@ -45,7 +45,7 @@ public:
 //    string solution_type   = "Any"; // array, bitmatrix, other
 };
 
-/** @class ComponentIDBuilder
+/** @class IDBuilder
  *  @brief Builder to create a componentID
  *
  *  The onion framework uses a simplified version of the Builder Pattern to create
@@ -61,9 +61,6 @@ public:
     IDBuilder& description(const string& desc)     {_id.description    = desc;     return *this;}
     IDBuilder& version(const string& ver)          {_id.version        = ver;      return *this;}
     IDBuilder& problem(const string& problem)      {_id.problem        = problem;  return *this;}
-//    IDBuilder& solution_type(const string& sol_t)  {_id.solution_type  = sol_t;    return *this;}
-
-private:
 
     friend class ComponentID;
     ComponentData _id;
@@ -71,7 +68,7 @@ private:
 };
 
 /** @class ComponentID
- *  @brief Base class used to identify concrete implementations of the Onion basic components.
+ *  @brief Base class used to provide identification functionalities to concrete implementations of the Onion components.
  *
  *  Classes that implement any of the four basic Onion components (CreateOperator, PerturbationOperator,
  *  ObjectiveFunction and SelectOperator) must inherit from ComponentID in order to be identifiable within
